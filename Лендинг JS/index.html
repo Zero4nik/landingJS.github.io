@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ProjectList</title>
+    <style>
+    </style>
+</head>
+  <body>
+     <button class="burger-menu" id="burgerMenu">☰</button>
+    <div class="container" id="container">
+        <div class="mainWeb">
+            <div class="navig-menu">
+                <header class="main-header">JS-лендинг</header>
+                <a class="navigMainMenu" href="#section1">Главная</a>
+                <a class="navigMainMenu" href="#section2">Возможности</a>
+                <a class="navigMainMenu" href="#section3">Живое демо</a>
+                <a class="navigMainMenu" href="#section4">Цена</a>
+                <button class="menuBtn action-btn" data-action="">Заказать</button>
+            </div>
+        </div>
+        <div class="web-1" id="section1">
+            <div class="header-menu">
+                <header>Создание и просмотр модального окна</header>
+            </div>
+            <div class="twoBtnMenu">
+                <button class="watchDemo" id="watchDemoBtn">Смотреть демо</button>
+                <button class="buyProject action-btn" id="buyProject">Заказать проект</button>
+            </div>
+            <div class="form_modal" id="orderModal">
+                <div class="modal__overlay"></div>
+                <div class="modal__content">
+                    <button class="modal__close" id="closeOrderModal">×</button>
+                    <header class="modal__title">Заказать проект</header>
+                    <form class="order-form" id="orderForm">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="orderName" name="name" required placeholder="Как к вам обращаться" class="order__name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="orderEmail" name="email" required placeholder="example@mail.com" class="order__email">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Описание проекта</label>
+                            <textarea id="description" name="description" rows="4" placeholder="Что вы хотите сделать" class="order__info"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Бюджет</label>
+                            <select id="budget" name="budget" class="order_money">
+                                <option value="">Выберите вариант</option>
+                                <option value="до 20к">до 20 000 ₽</option>
+                                <option value="20-50к">20 000 - 50 000 ₽</option>
+                                <option value="50к+">от 50 000 ₽</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="order-btn--submit">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+            <div class="modal" id="modal">
+                <input type="text" placeholder="Введите имя" class="modal-input" id="modalInput">
+                <button class="modalBtn" id="ModalBtn" data-add="name" data-input="modalInput" data-target="modalInfo">Отправить</button>
+                <p class="modal-info" id="modalInfo">Привет, </p>
+                <button class="separatelyBtn" id="FullDemoBtn">Полное демо</button>
+            </div>
+            <div class="fullModal" id="fullModal">
+                <button class="close-modal" id="closeModal">X</button>
+                <p class="fullModalHeader">FULL VERSION</p>
+                <div class="modalContent">
+                    <div class="modalLeft">
+                        <input class="modalName" id="JSModalName" type="text" placeholder="Введите имя...">
+                        <button class="BtnModalName" data-add="name" data-input="JSModalName" data-target="nameModal">Отправить</button>
+                        <div class="inputSkillWrapper">
+                            <input class="inputModal" type="text" placeholder="Добавить навык...">
+                            <button class="BtnModalSkill" data-add="skill" data-input="inputModal" data-target="skillModal">+</button>
+                        </div>
+                    </div>
+                    <div class="modalRight">
+                        <p class="headerModal">Визитка с резюме</p>
+                        <p class="nameModal">Имя</p>
+                        <p class="SkillModalInfo">Навыки:</p>
+                        <ul class="skillModal">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="web-2" id="section2">
+            <header class="opportunities">Возможности</header>
+            <div class="ThreeTab">
+                <div class="forWhom">
+                    <button>Для кого</button>
+                    <p class="komu">«Фрилансерам и разработчикам — для демонстрации навыков заказчикам. <br> Дизайнерам — для создания живых прототипов. <br> Стартапам — для быстрого запуска лендингов. <br> Всем, кому нужно показать работу, а не просто рассказать о ней.»</p>
+                </div>
+                <div class="function">
+                    <button>Функции</button>
+                    <p class="functionInfo">Динамическое изменение контента, модальные окна с формами, плавная навигация, переключение тем, интерактивные табы, живое обновление превью, адаптивный дизайн, управление элементами DOM в реальном времени — всё на чистом JavaScript без библиотек</p>
+                </div>
+                <div class="technology">
+                    <button>Технологии</button>
+                    <p class="technologyInfo">HTML5 для структуры, CSS3 для стилей и анимаций, чистый JavaScript для логики: работа с DOM, событиями, классами, атрибутами. Flexbox/Grid для вёрстки, CSS-переменные для тем</p>
+                </div>
+            </div>
+        </div>
+        <div class="web-3" id="section3">
+            <header class="headerLife">Живое демо</header>
+            <div class="lifeBlock">
+                <div class="leftLifeBlock">
+                    <input type="text" class="lifeName" placeholder="Имя">
+                    <button class="lifeNameBtn" id="lifeNameBtn">Отправить</button>
+                    <input type="text" class="newSkill" placeholder="Добавить умение">
+                    <button class="addSkill" data-add="skill" data-input="newSkill" data-target="listSkill">Добавить</button>
+                </div>
+                <div class="rightLifeBlock">
+                    <p class="yourName" id="yourName">Вас зовут </p>
+                    <p class="your-Skill" id="YourSkill">Ваши умения:</p>
+                    <ul id="listSkill">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="web-4" id="section4">
+            <header class="headerPrice">Цены</header>
+            <div class="price">
+                <div class="noob priceInfo">
+                    <h1>Базовый</h1>
+                    <h4>до 20 000 ₽</h4>
+                    <div class="info-price">
+                        <button class="priceSelect">Выбрать</button>
+                    </div>
+                </div>
+                <div class="pro priceInfo">
+                    <h1>Продвинутый</h1>
+                    <h4>20 000 - 50 000 ₽</h4>
+                    <div class="info-price">
+                        <button class="priceSelect">Выбрать</button>
+                    </div>
+                </div>
+                <div class="god priceInfo">
+                    <h1>Премиум</h1>
+                    <h4>от 50 000 ₽</h4>
+                    <div class="info-price">
+                        <button class="priceSelect">Выбрать</button>
+                    </div>
+                </div>
+            </div>
+            <div class="my-info">
+                <a href="https://vk.com/i_always_comeback_2">vie vk</a>
+                <a href="https://t.me/Msmink9191">vie tg</a>
+                © 2026 JS Конструктор. Все права защищены.
+                <div class="sub-info">
+                    <div class="Heading-email">
+                        <h2 class="sub-commit">Подписаться на обновление</h2>
+                    </div>
+                    <input type="email" id="lastEmail">
+                    <button id="lastBtn">Отправить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html> 
